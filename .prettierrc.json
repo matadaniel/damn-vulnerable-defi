@@ -1,1 +1,8 @@
-{ "printWidth": 65, "singleQuote": true, "arrowParens": "avoid" }
+{
+  "printWidth": 65,
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "overrides": [
+    { "files": "*.sol", "options": { "singleQuote": false } }
+  ]
+}
