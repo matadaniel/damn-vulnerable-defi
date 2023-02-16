@@ -22,7 +22,9 @@ describe('[Challenge] Truster', function () {
     });
 
     it('Execution', async function () {
-        /** CODE YOUR SOLUTION HERE */
+        await (
+          await ethers.getContractFactory('Trustee', player)
+        ).deploy(pool.address);
     });
 
     after(async function () {
