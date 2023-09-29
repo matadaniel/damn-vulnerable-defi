@@ -35,7 +35,12 @@ describe('[Challenge] Side entrance', function () {
   });
 
   it('Execution', async function () {
-    /** CODE YOUR SOLUTION HERE */
+    await (
+      await ethers.getContractFactory(
+        'FlashLoanEtherReceiverDeployer',
+        player
+      )
+    ).deploy(pool.address, ETHER_IN_POOL);
   });
 
   after(async function () {
